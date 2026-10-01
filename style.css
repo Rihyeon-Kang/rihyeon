@@ -918,3 +918,58 @@ a:hover {
     }
 
 }
+
+
+
+/* =========================================
+   PRIMARY RESEARCH AREAS
+========================================= */
+
+.research-areas {
+    margin:
+        24px 0
+        28px;
+}
+
+
+.research-areas-title {
+    margin:
+        0 0
+        8px;
+
+    color: #444444;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+
+.research-areas ul {
+    margin:
+        0;
+
+    padding-left:
+        22px;
+}
+
+
+.research-areas li {
+    margin:
+        4px 0;
+
+    padding-left:
+        3px;
+
+    line-height:
+        1.55;
+}
