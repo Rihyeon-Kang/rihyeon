@@ -175,7 +175,7 @@
     </section>
 
 
-    <!-- =========================
+<!-- =========================
      RESEARCH ACCORDION
 ========================== -->
 
@@ -184,7 +184,12 @@
     <div class="container">
 
         <button class="accordion-button"
-                onclick="toggleResearch(this)">
+                onclick="toggleDynamicSection(
+                    'research-content',
+                    'research-loaded-content',
+                    'partials/research.html',
+                    this
+                )">
 
             <span>Research</span>
 
@@ -200,10 +205,7 @@
 
             <div id="research-loaded-content">
 
-                <!--
-                research.html will be loaded here
-                automatically.
-                -->
+                <!-- research.html loads here -->
 
             </div>
 
@@ -214,30 +216,45 @@
 </section>
 
 
-    <!-- =========================
-         TEACHING LINK
-    ========================== -->
+<!-- =========================
+     TEACHING ACCORDION
+========================== -->
 
-    <section class="link-section">
+<section class="accordion-section">
 
-        <div class="container">
+    <div class="container">
 
-            <a class="section-link"
-               href="teaching.html">
+        <button class="accordion-button"
+                onclick="toggleDynamicSection(
+                    'teaching-content',
+                    'teaching-loaded-content',
+                    'partials/teaching.html',
+                    this
+                )">
 
-                <span>
-                    Teaching
-                </span>
+            <span>Teaching</span>
 
-                <span class="section-arrow">
-                    →
-                </span>
+            <span class="accordion-icon">
+                +
+            </span>
 
-            </a>
+        </button>
+
+
+        <div id="teaching-content"
+             class="accordion-content">
+
+            <div id="teaching-loaded-content">
+
+                <!-- teaching.html loads here -->
+
+            </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
 </main>
