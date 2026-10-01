@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Academic website of YOUR NAME, Ph.D. Candidate in Economics.">
+          content="Academic website of Rihyeon Kang, Ph.D. Candidate in Economics.">
 
     <title>Rihyeon Kang | Economics</title>
 
@@ -28,280 +29,583 @@
 
 <body>
 
-<header class="site-header">
-    <!--
-    <div class="nav-container">
 
-        <a class="site-name" href="index.html">
-            Rihyeon Kang
-        </a>
+    <!-- =========================================
+         HEADER
+    ========================================== -->
 
-        
-        <nav class="main-nav">
+    <header class="site-header">
 
-            <a href="index.html">Home</a>
+        <div class="nav-container">
 
-            <a href="partials/research.html">Research</a>
+            <a class="site-name"
+               href="index.html">
 
-            <a href="teaching.html">Teaching</a>
-
-        </nav>
-    </div>
-    -->
-
-</header>
-
-
-<main>
-
-    <!-- =========================
-         ABOUT + CONTACT
-    ========================== -->
-
-    <section class="hero">
-
-        <div class="container">
-
-            <p class="eyebrow">
-                Ph.D. Candidate in Economics
-            </p>
-
-            <h1>
                 Rihyeon Kang
-            </h1>
 
-            <p class="affiliation">
-                Department of Economics<br>
-                University of California, Santa Barbara
-            </p>
+            </a>
 
 
-            <p class="intro">
+            <nav class="main-nav">
 
-                I am a Ph.D. candidate in Economics at University of California, Santa Barbara (UCSB).
-
-                My research interests include labor economics,
-                technological change, economics of education,
-                and applied microeconomics.
-
-            </p>
-
-
-            <div class="contact-inline">
-
-                <a href="mailto:YOUR_EMAIL@university.edu">
-                    rkang@ucsb.edu
+                <a href="#about">
+                    About
                 </a>
 
-                <span>·</span>
-
-                <span>
-                    Santa Barbara, CA
-                </span>
-
-                <!--
-                <span>·</span>
-
-                <a href="YOUR_GOOGLE_SCHOLAR_URL"
-                   target="_blank"
-                   rel="noopener">
-                    Google Scholar
+                <a href="#cv-section">
+                    CV
                 </a>
 
-                <span>·</span>
-
-                <a href="YOUR_GITHUB_URL"
-                   target="_blank"
-                   rel="noopener">
-                    GitHub
+                <a href="#research-section">
+                    Research
                 </a>
-                -->
 
-            </div>
+                <a href="#teaching-section">
+                    Teaching
+                </a>
+
+            </nav>
 
         </div>
 
-    </section>
+    </header>
 
 
-    <!-- =========================
-         CV ACCORDION
-    ========================== -->
 
-    <section class="accordion-section">
-
-        <div class="container">
-
-            <button class="accordion-button"
-                    onclick="toggleSection('cv-content', this)">
-
-                <span>Curriculum Vitae</span>
-
-                <span class="accordion-icon">
-                    +
-                </span>
-
-            </button>
+    <main>
 
 
-            <div id="cv-content"
-                 class="accordion-content">
+        <!-- =========================================
+             ABOUT + CONTACT
+        ========================================== -->
 
-                <div class="pdf-wrapper">
+        <section id="about"
+                 class="hero">
 
-                    <iframe
-                        src="files/cv.pdf"
-                        title="Curriculum Vitae">
-                    </iframe>
+            <div class="container">
 
-                </div>
+                <p class="eyebrow">
+                    Ph.D. Candidate in Economics
+                </p>
 
 
-                <p class="fallback-link">
+                <h1>
+                    Rihyeon Kang
+                </h1>
 
-                    If the PDF does not display,
-                    <a href="files/cv.pdf"
-                       target="_blank"
-                       rel="noopener">
-                        open the CV directly
-                    </a>.
+
+                <p class="affiliation">
+
+                    Department of Economics<br>
+
+                    University of California, Santa Barbara (UCSB)
 
                 </p>
 
-            </div>
 
-        </div>
+                <p class="intro">
 
-    </section>
+                    I am a Ph.D. candidate in Economics at UCSB. 
 
+                    My research interests include
+                    labor economics,
+                    technological change,
+                    economics of education,
+                    and applied microeconomics.
 
-<!-- =========================
-     RESEARCH ACCORDION
-========================== -->
-
-<section class="accordion-section">
-
-    <div class="container">
-
-        <button class="accordion-button"
-                onclick="toggleDynamicSection(
-                    'research-content',
-                    'research-loaded-content',
-                    'partials/research.html',
-                    this
-                )">
-
-            <span>Research</span>
-
-            <span class="accordion-icon">
-                +
-            </span>
-
-        </button>
+                </p>
 
 
-        <div id="research-content"
-             class="accordion-content">
+                <!-- =================================
+                     CONTACT
+                ================================== -->
 
-            <div id="research-loaded-content">
+                <div class="contact-inline">
 
-                <!-- research.html loads here -->
+                    <a href="mailto:YOUR_EMAIL@university.edu">
 
-            </div>
+                        rkang@ucsb.edu
 
-        </div>
-
-    </div>
-
-</section>
+                    </a>
 
 
-<!-- =========================
-     TEACHING ACCORDION
-========================== -->
-
-<section class="accordion-section">
-
-    <div class="container">
-
-        <button class="accordion-button"
-                onclick="toggleDynamicSection(
-                    'teaching-content',
-                    'teaching-loaded-content',
-                    'partials/teaching.html',
-                    this
-                )">
-
-            <span>Teaching</span>
-
-            <span class="accordion-icon">
-                +
-            </span>
-
-        </button>
+                    <span>·</span>
 
 
-        <div id="teaching-content"
-             class="accordion-content">
+                    <span>
 
-            <div id="teaching-loaded-content">
+                        Santa Barbara, CA 
 
-                <!-- teaching.html loads here -->
+                    </span>
+
+                    <!--
+                    <span>·</span>
+
+
+                    <a href="YOUR_GOOGLE_SCHOLAR_URL"
+                       target="_blank"
+                       rel="noopener">
+
+                        Google Scholar
+
+                    </a>
+
+
+                    <span>·</span>
+
+
+                    <a href="YOUR_GITHUB_URL"
+                       target="_blank"
+                       rel="noopener">
+
+                        GitHub
+
+                    </a>
+                    -->
+
+                </div>
 
             </div>
 
+        </section>
+
+
+
+        <!-- =========================================
+             CURRICULUM VITAE
+        ========================================== -->
+
+        <section id="cv-section"
+                 class="accordion-section">
+
+            <div class="container">
+
+
+                <button
+                    class="accordion-button"
+                    type="button"
+                    onclick="toggleSection(
+                        'cv-content',
+                        this
+                    )"
+                    aria-expanded="false"
+                    aria-controls="cv-content">
+
+                    <span>
+                        Curriculum Vitae
+                    </span>
+
+
+                    <span class="accordion-icon"
+                          aria-hidden="true">
+
+                        +
+
+                    </span>
+
+                </button>
+
+
+
+                <div id="cv-content"
+                     class="accordion-content">
+
+
+                    <div class="pdf-wrapper">
+
+                        <iframe
+                            src="files/cv.pdf"
+                            title="Curriculum Vitae of Rihyeon Kang">
+
+                        </iframe>
+
+                    </div>
+
+
+                    <p class="fallback-link">
+
+                        If the PDF does not display correctly,
+
+                        <a href="files/cv.pdf"
+                           target="_blank"
+                           rel="noopener">
+
+                            open the CV directly
+
+                        </a>.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             RESEARCH
+             Loaded from partials/research.html
+        ========================================== -->
+
+        <section id="research-section"
+                 class="accordion-section">
+
+            <div class="container">
+
+
+                <button
+                    class="accordion-button"
+                    type="button"
+                    onclick="toggleDynamicSection(
+                        'research-content',
+                        'research-loaded-content',
+                        'partials/research.html',
+                        this
+                    )"
+                    aria-expanded="false"
+                    aria-controls="research-content">
+
+                    <span>
+                        Research
+                    </span>
+
+
+                    <span class="accordion-icon"
+                          aria-hidden="true">
+
+                        +
+
+                    </span>
+
+                </button>
+
+
+
+                <div id="research-content"
+                     class="accordion-content">
+
+                    <div id="research-loaded-content">
+
+                        <!--
+                        partials/research.html
+                        is loaded here dynamically.
+                        -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             TEACHING
+             Loaded from partials/teaching.html
+        ========================================== -->
+
+        <section id="teaching-section"
+                 class="accordion-section">
+
+            <div class="container">
+
+
+                <button
+                    class="accordion-button"
+                    type="button"
+                    onclick="toggleDynamicSection(
+                        'teaching-content',
+                        'teaching-loaded-content',
+                        'partials/teaching.html',
+                        this
+                    )"
+                    aria-expanded="false"
+                    aria-controls="teaching-content">
+
+                    <span>
+                        Teaching
+                    </span>
+
+
+                    <span class="accordion-icon"
+                          aria-hidden="true">
+
+                        +
+
+                    </span>
+
+                </button>
+
+
+
+                <div id="teaching-content"
+                     class="accordion-content">
+
+                    <div id="teaching-loaded-content">
+
+                        <!--
+                        partials/teaching.html
+                        is loaded here dynamically.
+                        -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+
+                ©
+                <span id="year"></span>
+                Rihyeon Kang
+
+            </p>
+
         </div>
 
-    </div>
-
-</section>
+    </footer>
 
 
-</main>
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
 
 
-<footer class="site-footer">
+        /* =========================================
+           Track which partials have already loaded
+        ========================================== */
 
-    <div class="container">
-
-        <p>
-            © <span id="year"></span> YOUR NAME
-        </p>
-
-    </div>
-
-</footer>
+        const loadedSections = {};
 
 
-<script>
 
-    /* =========================================
-       Generic accordion
-    ========================================= */
+        /* =========================================
+           Regular accordion
+           Used for CV
+        ========================================== */
 
-    function toggleSection(id, button) {
+        function toggleSection(
+            contentId,
+            button
+        ) {
 
-        const content =
-            document.getElementById(id);
+            const content =
+                document.getElementById(contentId);
 
-        const icon =
-            button.querySelector('.accordion-icon');
+            const icon =
+                button.querySelector(
+                    '.accordion-icon'
+                );
 
-        const isOpen =
-            content.classList.contains('open');
+            const isOpen =
+                content.classList.contains(
+                    'open'
+                );
 
 
-        if (isOpen) {
+            if (isOpen) {
 
-            content.classList.remove('open');
+                content.classList.remove(
+                    'open'
+                );
 
-            icon.textContent = '+';
+                icon.textContent = '+';
 
-        } else {
+                button.setAttribute(
+                    'aria-expanded',
+                    'false'
+                );
 
-            content.classList.add('open');
+            } else {
+
+                content.classList.add(
+                    'open'
+                );
+
+                icon.textContent = '−';
+
+                button.setAttribute(
+                    'aria-expanded',
+                    'true'
+                );
+
+
+                setTimeout(() => {
+
+                    content.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                }, 120);
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           Dynamic accordion
+           Used for Research + Teaching
+        ========================================== */
+
+        async function toggleDynamicSection(
+            contentId,
+            targetId,
+            filePath,
+            button
+        ) {
+
+            const content =
+                document.getElementById(
+                    contentId
+                );
+
+            const target =
+                document.getElementById(
+                    targetId
+                );
+
+            const icon =
+                button.querySelector(
+                    '.accordion-icon'
+                );
+
+            const isOpen =
+                content.classList.contains(
+                    'open'
+                );
+
+
+            /* =====================================
+               CLOSE
+            ====================================== */
+
+            if (isOpen) {
+
+                content.classList.remove(
+                    'open'
+                );
+
+                icon.textContent = '+';
+
+                button.setAttribute(
+                    'aria-expanded',
+                    'false'
+                );
+
+                return;
+
+            }
+
+
+
+            /* =====================================
+               LOAD PARTIAL
+               Only once per page load
+            ====================================== */
+
+            if (!loadedSections[filePath]) {
+
+                target.innerHTML = `
+                    <p class="loading-text">
+                        Loading...
+                    </p>
+                `;
+
+
+                try {
+
+                    const response =
+                        await fetch(
+                            filePath
+                        );
+
+
+                    if (!response.ok) {
+
+                        throw new Error(
+                            `Unable to load ${filePath}`
+                        );
+
+                    }
+
+
+                    const html =
+                        await response.text();
+
+
+                    target.innerHTML =
+                        html;
+
+
+                    loadedSections[filePath] =
+                        true;
+
+
+                } catch (error) {
+
+
+                    target.innerHTML = `
+                        <p class="loading-error">
+                            This content could not be loaded.
+                            Please refresh the page and try again.
+                        </p>
+                    `;
+
+
+                    console.error(
+                        error
+                    );
+
+
+                    return;
+
+                }
+
+            }
+
+
+
+            /* =====================================
+               OPEN
+            ====================================== */
+
+            content.classList.add(
+                'open'
+            );
 
             icon.textContent = '−';
+
+            button.setAttribute(
+                'aria-expanded',
+                'true'
+            );
 
 
             setTimeout(() => {
@@ -315,121 +619,71 @@
 
         }
 
-    }
 
 
+        /* =========================================
+           NAVIGATION HELPERS
 
-    /* =========================================
-       Load Research from research.html
-    ========================================= */
+           Clicking CV / Research / Teaching
+           in the top navigation scrolls to section.
 
-    let researchLoaded = false;
+           The user can then click the accordion.
+        ========================================== */
 
+        document
+            .querySelectorAll(
+                '.main-nav a[href^="#"]'
+            )
+            .forEach(link => {
 
-    async function toggleResearch(button) {
+                link.addEventListener(
+                    'click',
+                    function(event) {
 
-        const content =
-            document.getElementById('research-content');
+                        const targetId =
+                            this.getAttribute(
+                                'href'
+                            );
 
-        const target =
-            document.getElementById('research-loaded-content');
-
-        const icon =
-            button.querySelector('.accordion-icon');
-
-        const isOpen =
-            content.classList.contains('open');
-
-
-        /* Close */
-
-        if (isOpen) {
-
-            content.classList.remove('open');
-
-            icon.textContent = '+';
-
-            return;
-
-        }
+                        const target =
+                            document.querySelector(
+                                targetId
+                            );
 
 
-        /* Load research.html only the first time */
+                        if (target) {
 
-        if (!researchLoaded) {
-
-            target.innerHTML =
-                '<p class="loading-text">Loading research...</p>';
+                            event.preventDefault();
 
 
-            try {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
 
-                const response =
-                    await fetch('research.html');
+                        }
 
+                    }
+                );
 
-                if (!response.ok) {
-
-                    throw new Error(
-                        'Unable to load research.html'
-                    );
-
-                }
-
-
-                const html =
-                    await response.text();
-
-
-                target.innerHTML = html;
-
-                researchLoaded = true;
-
-
-            } catch (error) {
-
-                target.innerHTML = `
-                    <p class="loading-error">
-                        Research information could not be loaded.
-                        Please refresh the page.
-                    </p>
-                `;
-
-                console.error(error);
-
-            }
-
-        }
-
-
-        /* Open accordion */
-
-        content.classList.add('open');
-
-        icon.textContent = '−';
-
-
-        setTimeout(() => {
-
-            content.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
             });
 
-        }, 120);
-
-    }
 
 
+        /* =========================================
+           CURRENT YEAR
+        ========================================== */
 
-    /* =========================================
-       Current year
-    ========================================= */
+        document
+            .getElementById(
+                'year'
+            )
+            .textContent =
+                new Date()
+                    .getFullYear();
 
-    document.getElementById('year').textContent =
-        new Date().getFullYear();
 
-</script>
+    </script>
 
 
 </body>
