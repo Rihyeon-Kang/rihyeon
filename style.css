@@ -30,16 +30,18 @@ body {
 
 
 /* =========================================
-   LINKS
+   GENERAL LINKS
 ========================================= */
 
 a {
     color: #284b72;
+
     text-decoration: none;
 }
 
 a:hover {
     color: #173754;
+
     text-decoration: underline;
 }
 
@@ -50,7 +52,10 @@ a:hover {
 
 .container {
     width: min(980px, 90%);
-    margin: 0 auto;
+
+    margin-left: auto;
+
+    margin-right: auto;
 }
 
 
@@ -76,7 +81,7 @@ a:hover {
 .nav-container {
     width: min(980px, 90%);
 
-    min-height: 68px;
+    min-height: 66px;
 
     margin: 0 auto;
 
@@ -98,17 +103,19 @@ a:hover {
         Helvetica,
         sans-serif;
 
-    font-size: 15px;
+    font-size: 14px;
 
     font-weight: 700;
 
-    letter-spacing: 0.08em;
+    letter-spacing: 0.07em;
 
     text-transform: uppercase;
 }
 
 
 .site-name:hover {
+    color: #171717;
+
     text-decoration: none;
 }
 
@@ -118,12 +125,14 @@ a:hover {
 
     flex-wrap: wrap;
 
+    align-items: center;
+
     gap: 24px;
 }
 
 
 .main-nav a {
-    color: #3c3c3c;
+    color: #3d3d3d;
 
     font-family:
         Arial,
@@ -131,6 +140,8 @@ a:hover {
         sans-serif;
 
     font-size: 14px;
+
+    font-weight: 400;
 }
 
 
@@ -142,20 +153,41 @@ a:hover {
 
 
 /* =========================================
-   HERO
+   HERO / ABOUT
 ========================================= */
 
 .hero {
-    padding: 95px 0 75px;
+    padding:
+        82px 0
+        72px;
 
     border-bottom:
         1px solid #e4e4e4;
 }
 
 
-.eyebrow,
-.section-label {
-    margin: 0 0 10px;
+.hero-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        260px;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+.hero-text {
+    min-width: 0;
+}
+
+
+.eyebrow {
+    margin:
+        0 0
+        10px;
 
     color: #697887;
 
@@ -174,74 +206,140 @@ a:hover {
 }
 
 
+/* Smaller name than previous version */
+
 .hero h1 {
-    margin: 0 0 14px;
+    margin:
+        0 0
+        13px;
 
     color: #141414;
 
     font-size:
-        clamp(42px, 7vw, 64px);
+        clamp(
+            34px,
+            5vw,
+            48px
+        );
 
-    line-height: 1.05;
+    line-height: 1.1;
 
     font-weight: 500;
 
-    letter-spacing: -0.03em;
+    letter-spacing:
+        -0.025em;
 }
 
 
 .affiliation {
-    margin-bottom: 28px;
+    margin:
+        0 0
+        27px;
 
     color: #565656;
 
-    font-size: 19px;
+    font-size: 18px;
+
+    line-height: 1.55;
 }
 
 
 .intro {
-    max-width: 760px;
+    max-width: 690px;
 
-    margin-bottom: 28px;
+    margin:
+        0 0
+        27px;
 
-    font-size: 19px;
+    font-size: 18px;
 
     line-height: 1.75;
 }
 
+
+/* =========================================
+   CONTACT
+========================================= */
 
 .contact-inline {
     display: flex;
 
     flex-wrap: wrap;
 
-    gap: 10px;
+    align-items: center;
 
-    color: #7a7a7a;
+    gap: 8px 10px;
+
+    color: #777777;
 
     font-family:
         Arial,
         Helvetica,
         sans-serif;
 
-    font-size: 14px;
+    font-size: 13.5px;
+
+    line-height: 1.6;
+}
+
+
+.contact-inline a {
+    color: #284b72;
 }
 
 
 /* =========================================
-   ACCORDION
+   PROFILE PHOTO
+========================================= */
+
+.profile-photo-wrapper {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+}
+
+
+.profile-photo {
+    display: block;
+
+    width: 230px;
+
+    height: 285px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 3px;
+
+    border:
+        1px solid #dedede;
+
+    background: #f5f5f5;
+}
+
+
+/* =========================================
+   ACCORDION SECTIONS
 ========================================= */
 
 .accordion-section {
     border-bottom:
         1px solid #e4e4e4;
+
+    background: #ffffff;
 }
 
 
 .accordion-button {
     width: 100%;
 
-    padding: 28px 0;
+    padding:
+        27px 0;
 
     border: none;
 
@@ -253,6 +351,8 @@ a:hover {
 
     align-items: center;
 
+    gap: 20px;
+
     cursor: pointer;
 
     color: #171717;
@@ -262,9 +362,11 @@ a:hover {
         "Times New Roman",
         serif;
 
-    font-size: 30px;
+    font-size: 29px;
 
     font-weight: 500;
+
+    line-height: 1.25;
 
     text-align: left;
 }
@@ -275,7 +377,17 @@ a:hover {
 }
 
 
+.accordion-button:focus-visible {
+    outline:
+        2px solid #284b72;
+
+    outline-offset: 4px;
+}
+
+
 .accordion-icon {
+    flex-shrink: 0;
+
     color: #777777;
 
     font-family:
@@ -283,11 +395,17 @@ a:hover {
         Helvetica,
         sans-serif;
 
-    font-size: 29px;
+    font-size: 28px;
 
     font-weight: 300;
+
+    line-height: 1;
 }
 
+
+/* =========================================
+   ACCORDION CONTENT
+========================================= */
 
 .accordion-content {
     max-height: 0;
@@ -300,13 +418,13 @@ a:hover {
 
     transition:
         max-height 0.5s ease,
-        opacity 0.35s ease,
-        padding 0.35s ease;
+        opacity 0.3s ease,
+        padding-bottom 0.35s ease;
 }
 
 
 .accordion-content.open {
-    max-height: 6000px;
+    max-height: 8000px;
 
     opacity: 1;
 
@@ -315,63 +433,15 @@ a:hover {
 
 
 /* =========================================
-   SECTION LINKS
-========================================= */
-
-.link-section {
-    border-bottom:
-        1px solid #e4e4e4;
-}
-
-
-.section-link {
-    width: 100%;
-
-    padding: 28px 0;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    color: #171717;
-
-    font-size: 30px;
-
-    font-weight: 500;
-
-    text-decoration: none;
-}
-
-
-.section-link:hover {
-    color: #284b72;
-
-    text-decoration: none;
-}
-
-
-.section-arrow {
-    color: #777777;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 27px;
-}
-
-
-/* =========================================
-   PDF
+   CV PDF
 ========================================= */
 
 .pdf-wrapper {
     width: 100%;
 
     height: 900px;
+
+    overflow: hidden;
 
     border:
         1px solid #d8d8d8;
@@ -381,6 +451,8 @@ a:hover {
 
 
 .pdf-wrapper iframe {
+    display: block;
+
     width: 100%;
 
     height: 100%;
@@ -390,7 +462,8 @@ a:hover {
 
 
 .fallback-link {
-    margin-top: 12px;
+    margin:
+        12px 0 0;
 
     color: #777777;
 
@@ -404,59 +477,23 @@ a:hover {
 
 
 /* =========================================
-   RESEARCH PREVIEW
+   DYNAMIC PARTIAL CONTAINERS
 ========================================= */
 
-.research-item {
-    padding: 38px 0;
-
-    border-top:
-        1px solid #dedede;
+#research-loaded-content,
+#teaching-loaded-content {
+    width: 100%;
 }
 
 
-.research-item:first-child {
-    border-top: none;
+/* =========================================
+   LOADING / ERROR STATES
+========================================= */
 
-    padding-top: 12px;
-}
-
-
-.research-item h2 {
-    max-width: 850px;
-
-    margin: 5px 0 8px;
-
-    font-size: 25px;
-
-    line-height: 1.35;
-
-    font-weight: 500;
-}
-
-
-.paper-status {
-    margin: 0 0 5px;
-
-    color: #697887;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    letter-spacing: 0.1em;
-
-    text-transform: uppercase;
-}
-
-
-.paper-meta {
-    margin: 4px 0 14px;
+.loading-text,
+.loading-error {
+    padding:
+        20px 0;
 
     color: #777777;
 
@@ -469,96 +506,182 @@ a:hover {
 }
 
 
-.paper-links {
-    margin-top: 17px;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 14px;
-
-    font-weight: 600;
-}
-
-
-.detail-link {
-    margin-top: 28px;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 14px;
-
-    font-weight: 600;
+.loading-error {
+    color: #7d3434;
 }
 
 
 /* =========================================
-   DETAIL PAGES
+   RESEARCH ITEMS
 ========================================= */
 
-.page-header {
+.research-item {
+    max-width: 880px;
+
     padding:
-        85px 0
-        52px;
-}
-
-
-.page-header h1 {
-    margin: 0 0 14px;
-
-    color: #151515;
-
-    font-size:
-        clamp(40px, 6vw, 58px);
-
-    font-weight: 500;
-
-    line-height: 1.1;
-
-    letter-spacing: -0.03em;
-}
-
-
-.page-intro {
-    max-width: 760px;
-
-    color: #565656;
-
-    font-size: 18px;
-}
-
-
-.research-list {
-    padding-bottom: 90px;
-}
-
-
-.full-paper {
-    max-width: 900px;
-
-    padding: 42px 0;
+        37px 0;
 
     border-top:
         1px solid #dedede;
 }
 
 
-.full-paper:first-child {
+.research-item:first-child {
+    padding-top:
+        10px;
+
+    border-top:
+        none;
+}
+
+
+.research-item h2 {
+    max-width: 840px;
+
+    margin:
+        5px 0
+        8px;
+
+    color: #202020;
+
+    font-size: 25px;
+
+    line-height: 1.35;
+
+    font-weight: 500;
+
+    letter-spacing:
+        -0.01em;
+}
+
+
+.research-featured h2 {
+    font-size: 27px;
+}
+
+
+.paper-status {
+    margin:
+        0 0
+        5px;
+
+    color: #697887;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 11.5px;
+
+    font-weight: 700;
+
+    letter-spacing:
+        0.1em;
+
+    text-transform: uppercase;
+}
+
+
+.paper-meta {
+    margin:
+        4px 0
+        14px;
+
+    color: #777777;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13.5px;
+}
+
+
+.paper-abstract {
+    max-width: 840px;
+
+    margin:
+        16px 0 0;
+
+    line-height: 1.75;
+}
+
+
+.paper-actions {
+    margin-top: 20px;
+}
+
+
+.paper-button {
+    display: inline-block;
+
+    padding:
+        8px 14px;
+
+    border:
+        1px solid #b5c0cb;
+
+    border-radius:
+        3px;
+
+    color: #284b72;
+
+    background: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.paper-button:hover {
+    color: #193858;
+
+    background: #f4f6f8;
+
+    border-color: #8999a8;
+
+    text-decoration: none;
+}
+
+
+/* =========================================
+   TEACHING ITEMS
+========================================= */
+
+.teaching-item {
+    max-width: 880px;
+
+    padding:
+        34px 0;
+
+    border-top:
+        1px solid #dedede;
+}
+
+
+.teaching-item:first-child {
+    padding-top: 10px;
+
     border-top: none;
 }
 
 
-.full-paper h2 {
-    margin: 5px 0 8px;
+.teaching-item h2 {
+    margin:
+        5px 0
+        8px;
 
     color: #202020;
 
-    font-size: 26px;
+    font-size: 24px;
 
     font-weight: 500;
 
@@ -566,19 +689,14 @@ a:hover {
 }
 
 
-.coauthors {
-    margin: 4px 0 7px;
-
-    color: #565656;
+.teaching-item p {
+    max-width: 820px;
 }
 
 
-.abstract {
-    margin-top: 18px;
-
-    max-width: 880px;
-}
-
+/* =========================================
+   UTILITY
+========================================= */
 
 .muted {
     color: #777777;
@@ -590,10 +708,8 @@ a:hover {
 ========================================= */
 
 .site-footer {
-    padding: 32px 0;
-
-    border-top:
-        1px solid #e6e6e6;
+    padding:
+        31px 0;
 
     color: #777777;
 
@@ -604,7 +720,31 @@ a:hover {
         Helvetica,
         sans-serif;
 
-    font-size: 13px;
+    font-size: 12.5px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .hero-grid {
+        grid-template-columns:
+            minmax(0, 1fr)
+            210px;
+
+        gap: 45px;
+    }
+
+
+    .profile-photo {
+        width: 195px;
+
+        height: 245px;
+    }
+
 }
 
 
@@ -623,21 +763,19 @@ a:hover {
         min-height: auto;
 
         padding:
-            15px 0;
+            14px 0;
 
-        align-items:
-            flex-start;
+        flex-direction: column;
 
-        flex-direction:
-            column;
+        align-items: flex-start;
 
-        gap: 8px;
+        gap: 7px;
     }
 
 
     .main-nav {
         gap:
-            10px 18px;
+            8px 17px;
     }
 
 
@@ -648,8 +786,49 @@ a:hover {
 
     .hero {
         padding:
-            64px 0
-            52px;
+            58px 0
+            50px;
+    }
+
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .hero-text {
+        order: 1;
+    }
+
+
+    .profile-photo-wrapper {
+        order: 2;
+
+        justify-content: flex-start;
+    }
+
+
+    .profile-photo {
+        width: 175px;
+
+        height: 215px;
+    }
+
+
+    .hero h1 {
+        font-size:
+            clamp(
+                32px,
+                10vw,
+                40px
+            );
+    }
+
+
+    .affiliation {
+        font-size: 17px;
     }
 
 
@@ -658,12 +837,26 @@ a:hover {
     }
 
 
-    .accordion-button,
-    .section-link {
-        font-size: 25px;
+    .contact-inline {
+        font-size: 13px;
+    }
 
+
+    .accordion-button {
         padding:
             23px 0;
+
+        font-size: 24px;
+    }
+
+
+    .accordion-icon {
+        font-size: 25px;
+    }
+
+
+    .accordion-content.open {
+        padding-bottom: 42px;
     }
 
 
@@ -672,90 +865,56 @@ a:hover {
     }
 
 
-    .page-header {
+    .research-item {
         padding:
-            65px 0
-            40px;
+            31px 0;
     }
 
 
-    .full-paper {
-        padding:
-            32px 0;
+    .research-item h2,
+    .research-featured h2 {
+        font-size: 22px;
+    }
+
+
+    .teaching-item h2 {
+        font-size: 21px;
     }
 
 }
-
 
 
 /* =========================================
-   Dynamically loaded research
+   SMALL MOBILE
 ========================================= */
 
-#research-loaded-content {
-    width: 100%;
-}
+@media (max-width: 450px) {
+
+    .container,
+    .nav-container {
+        width: 92%;
+    }
 
 
-.loading-text,
-.loading-error {
-    padding: 25px 0;
-
-    color: #777777;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 14px;
-}
+    .hero {
+        padding-top: 46px;
+    }
 
 
-.paper-abstract {
-    max-width: 850px;
+    .profile-photo {
+        width: 150px;
 
-    margin-top: 16px;
-}
-
-
-.paper-actions {
-    margin-top: 20px;
-}
+        height: 188px;
+    }
 
 
-.paper-button {
-    display: inline-block;
-
-    padding: 9px 15px;
-
-    border:
-        1px solid #b5c0cb;
-
-    border-radius: 3px;
-
-    color: #284b72;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 13px;
-
-    font-weight: 600;
-}
+    .contact-inline {
+        gap: 6px 8px;
+    }
 
 
-.paper-button:hover {
-    background: #f4f6f8;
+    .pdf-wrapper {
+        height: 520px;
+    }
 
-    border-color: #8698aa;
-
-    text-decoration: none;
-}
-
-
-.research-featured h2 {
-    font-size: 28px;
 }
