@@ -10,7 +10,7 @@
     <meta name="description"
           content="Academic website of YOUR NAME, Ph.D. Candidate in Economics.">
 
-    <title>YOUR NAME | Economics</title>
+    <title>Rihyeon Kang | Economics</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -29,13 +29,14 @@
 <body>
 
 <header class="site-header">
-
+    <!--
     <div class="nav-container">
 
         <a class="site-name" href="index.html">
-            YOUR NAME
+            Rihyeon Kang
         </a>
 
+        
         <nav class="main-nav">
 
             <a href="index.html">Home</a>
@@ -45,8 +46,8 @@
             <a href="teaching.html">Teaching</a>
 
         </nav>
-
     </div>
+    -->
 
 </header>
 
@@ -66,19 +67,18 @@
             </p>
 
             <h1>
-                YOUR NAME
+                Rihyeon Kang
             </h1>
 
             <p class="affiliation">
                 Department of Economics<br>
-                YOUR UNIVERSITY
+                University of California, Santa Barbara
             </p>
 
 
             <p class="intro">
 
-                I am a Ph.D. candidate in Economics at
-                YOUR UNIVERSITY.
+                I am a Ph.D. candidate in Economics at University of California, Santa Barbara (UCSB).
 
                 My research interests include labor economics,
                 technological change, economics of education,
@@ -90,15 +90,16 @@
             <div class="contact-inline">
 
                 <a href="mailto:YOUR_EMAIL@university.edu">
-                    YOUR_EMAIL@university.edu
+                    rkang@ucsb.edu
                 </a>
 
                 <span>·</span>
 
                 <span>
-                    YOUR CITY, STATE
+                    Santa Barbara, CA
                 </span>
 
+                <!--
                 <span>·</span>
 
                 <a href="YOUR_GOOGLE_SCHOLAR_URL"
@@ -114,6 +115,7 @@
                    rel="noopener">
                     GitHub
                 </a>
+                -->
 
             </div>
 
@@ -174,131 +176,42 @@
 
 
     <!-- =========================
-         RESEARCH ACCORDION
-    ========================== -->
+     RESEARCH ACCORDION
+========================== -->
 
-    <section class="accordion-section">
+<section class="accordion-section">
 
-        <div class="container">
+    <div class="container">
 
-            <button class="accordion-button"
-                    onclick="toggleSection('research-content', this)">
+        <button class="accordion-button"
+                onclick="toggleResearch(this)">
 
-                <span>Research</span>
+            <span>Research</span>
 
-                <span class="accordion-icon">
-                    +
-                </span>
+            <span class="accordion-icon">
+                +
+            </span>
 
-            </button>
-
-
-            <div id="research-content"
-                 class="accordion-content">
+        </button>
 
 
-                <!-- JOB MARKET PAPER -->
+        <div id="research-content"
+             class="accordion-content">
 
-                <article class="research-item">
+            <div id="research-loaded-content">
 
-                    <p class="paper-status">
-                        Job Market Paper
-                    </p>
-
-                    <h2>
-                        YOUR JOB MARKET PAPER TITLE
-                    </h2>
-
-                    <p class="paper-meta">
-                        YOUR NAME
-                    </p>
-
-                    <p>
-
-                        Write a concise description of your
-                        job market paper here.
-
-                        Explain the research question,
-                        identification strategy,
-                        main empirical findings,
-                        and contribution.
-
-                    </p>
-
-                    <p class="paper-links">
-
-                        <a href="files/jmp.pdf"
-                           target="_blank"
-                           rel="noopener">
-                            Paper PDF →
-                        </a>
-
-                    </p>
-
-                </article>
-
-
-                <!-- PAPER 2 -->
-
-                <article class="research-item">
-
-                    <p class="paper-status">
-                        Working Paper
-                    </p>
-
-                    <h2>
-                        YOUR SECOND PAPER TITLE
-                    </h2>
-
-                    <p class="paper-meta">
-                        with COAUTHOR NAME
-                    </p>
-
-                    <p>
-
-                        Short description of the research question,
-                        data, empirical strategy,
-                        main findings, and contribution.
-
-                    </p>
-
-                </article>
-
-
-                <!-- PAPER 3 -->
-
-                <article class="research-item">
-
-                    <p class="paper-status">
-                        Work in Progress
-                    </p>
-
-                    <h2>
-                        YOUR THIRD PAPER TITLE
-                    </h2>
-
-                    <p>
-
-                        Short description of the project.
-
-                    </p>
-
-                </article>
-
-
-                <p class="detail-link">
-
-                    <a href="research.html">
-                        View detailed research page →
-                    </a>
-
-                </p>
+                <!--
+                research.html will be loaded here
+                automatically.
+                -->
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
     <!-- =========================
@@ -345,6 +258,10 @@
 
 <script>
 
+    /* =========================================
+       Generic accordion
+    ========================================= */
+
     function toggleSection(id, button) {
 
         const content =
@@ -355,6 +272,7 @@
 
         const isOpen =
             content.classList.contains('open');
+
 
         if (isOpen) {
 
@@ -367,6 +285,7 @@
             content.classList.add('open');
 
             icon.textContent = '−';
+
 
             setTimeout(() => {
 
@@ -381,6 +300,114 @@
 
     }
 
+
+
+    /* =========================================
+       Load Research from research.html
+    ========================================= */
+
+    let researchLoaded = false;
+
+
+    async function toggleResearch(button) {
+
+        const content =
+            document.getElementById('research-content');
+
+        const target =
+            document.getElementById('research-loaded-content');
+
+        const icon =
+            button.querySelector('.accordion-icon');
+
+        const isOpen =
+            content.classList.contains('open');
+
+
+        /* Close */
+
+        if (isOpen) {
+
+            content.classList.remove('open');
+
+            icon.textContent = '+';
+
+            return;
+
+        }
+
+
+        /* Load research.html only the first time */
+
+        if (!researchLoaded) {
+
+            target.innerHTML =
+                '<p class="loading-text">Loading research...</p>';
+
+
+            try {
+
+                const response =
+                    await fetch('research.html');
+
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        'Unable to load research.html'
+                    );
+
+                }
+
+
+                const html =
+                    await response.text();
+
+
+                target.innerHTML = html;
+
+                researchLoaded = true;
+
+
+            } catch (error) {
+
+                target.innerHTML = `
+                    <p class="loading-error">
+                        Research information could not be loaded.
+                        Please refresh the page.
+                    </p>
+                `;
+
+                console.error(error);
+
+            }
+
+        }
+
+
+        /* Open accordion */
+
+        content.classList.add('open');
+
+        icon.textContent = '−';
+
+
+        setTimeout(() => {
+
+            content.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+
+        }, 120);
+
+    }
+
+
+
+    /* =========================================
+       Current year
+    ========================================= */
 
     document.getElementById('year').textContent =
         new Date().getFullYear();
