@@ -685,3 +685,77 @@ a:hover {
     }
 
 }
+
+
+
+/* =========================================
+   Dynamically loaded research
+========================================= */
+
+#research-loaded-content {
+    width: 100%;
+}
+
+
+.loading-text,
+.loading-error {
+    padding: 25px 0;
+
+    color: #777777;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+}
+
+
+.paper-abstract {
+    max-width: 850px;
+
+    margin-top: 16px;
+}
+
+
+.paper-actions {
+    margin-top: 20px;
+}
+
+
+.paper-button {
+    display: inline-block;
+
+    padding: 9px 15px;
+
+    border:
+        1px solid #b5c0cb;
+
+    border-radius: 3px;
+
+    color: #284b72;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.paper-button:hover {
+    background: #f4f6f8;
+
+    border-color: #8698aa;
+
+    text-decoration: none;
+}
+
+
+.research-featured h2 {
+    font-size: 28px;
+}
