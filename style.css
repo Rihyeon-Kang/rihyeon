@@ -1,3 +1,7 @@
+/* =========================================
+   RESET
+========================================= */
+
 * {
     box-sizing: border-box;
 }
@@ -24,14 +28,25 @@ body {
     line-height: 1.7;
 }
 
+
+/* =========================================
+   LINKS
+========================================= */
+
 a {
     color: #284b72;
     text-decoration: none;
 }
 
 a:hover {
+    color: #173754;
     text-decoration: underline;
 }
+
+
+/* =========================================
+   GENERAL LAYOUT
+========================================= */
 
 .container {
     width: min(980px, 90%);
@@ -39,75 +54,76 @@ a:hover {
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* =========================================
+   HEADER
+========================================= */
 
-.hero {
-    padding: 95px 0 70px;
+.site-header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background:
+        rgba(255, 255, 255, 0.97);
 
     border-bottom:
-        1px solid #e4e4e4;
+        1px solid #e5e5e5;
 }
 
-.eyebrow {
-    margin: 0 0 10px;
 
-    color: #6c7884;
+.nav-container {
+    width: min(980px, 90%);
+
+    min-height: 68px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+.site-name {
+    color: #171717;
 
     font-family:
         Arial,
         Helvetica,
         sans-serif;
 
-    font-size: 13px;
+    font-size: 15px;
 
     font-weight: 700;
 
-    letter-spacing: 0.12em;
+    letter-spacing: 0.08em;
 
     text-transform: uppercase;
 }
 
-.hero h1 {
-    margin: 0 0 14px;
 
-    color: #151515;
-
-    font-size:
-        clamp(42px, 7vw, 66px);
-
-    line-height: 1.05;
-
-    font-weight: 500;
-
-    letter-spacing: -0.03em;
+.site-name:hover {
+    text-decoration: none;
 }
 
-.affiliation {
-    margin-bottom: 28px;
 
-    color: #565656;
-
-    font-size: 19px;
-}
-
-.intro {
-    max-width: 760px;
-
-    margin-bottom: 26px;
-
-    font-size: 19px;
-}
-
-.contact-inline {
+.main-nav {
     display: flex;
 
     flex-wrap: wrap;
 
-    gap: 10px;
+    gap: 24px;
+}
 
-    color: #777777;
+
+.main-nav a {
+    color: #3c3c3c;
 
     font-family:
         Arial,
@@ -118,16 +134,109 @@ a:hover {
 }
 
 
-/* =========================
-   ACCORDION SECTIONS
-========================= */
+.main-nav a:hover {
+    color: #284b72;
+
+    text-decoration: none;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    padding: 95px 0 75px;
+
+    border-bottom:
+        1px solid #e4e4e4;
+}
+
+
+.eyebrow,
+.section-label {
+    margin: 0 0 10px;
+
+    color: #697887;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+.hero h1 {
+    margin: 0 0 14px;
+
+    color: #141414;
+
+    font-size:
+        clamp(42px, 7vw, 64px);
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    letter-spacing: -0.03em;
+}
+
+
+.affiliation {
+    margin-bottom: 28px;
+
+    color: #565656;
+
+    font-size: 19px;
+}
+
+
+.intro {
+    max-width: 760px;
+
+    margin-bottom: 28px;
+
+    font-size: 19px;
+
+    line-height: 1.75;
+}
+
+
+.contact-inline {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    color: #7a7a7a;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   ACCORDION
+========================================= */
 
 .accordion-section {
     border-bottom:
         1px solid #e4e4e4;
-
-    background: #ffffff;
 }
+
 
 .accordion-button {
     width: 100%;
@@ -160,25 +269,25 @@ a:hover {
     text-align: left;
 }
 
+
 .accordion-button:hover {
     color: #284b72;
 }
 
+
 .accordion-icon {
-    color: #6e6e6e;
+    color: #777777;
 
     font-family:
         Arial,
         Helvetica,
         sans-serif;
 
-    font-size: 30px;
+    font-size: 29px;
 
     font-weight: 300;
 }
 
-
-/* hidden by default */
 
 .accordion-content {
     max-height: 0;
@@ -187,19 +296,17 @@ a:hover {
 
     opacity: 0;
 
+    padding-bottom: 0;
+
     transition:
         max-height 0.5s ease,
         opacity 0.35s ease,
         padding 0.35s ease;
-
-    padding-bottom: 0;
 }
 
 
-/* opened */
-
 .accordion-content.open {
-    max-height: 5000px;
+    max-height: 6000px;
 
     opacity: 1;
 
@@ -207,9 +314,59 @@ a:hover {
 }
 
 
-/* =========================
+/* =========================================
+   SECTION LINKS
+========================================= */
+
+.link-section {
+    border-bottom:
+        1px solid #e4e4e4;
+}
+
+
+.section-link {
+    width: 100%;
+
+    padding: 28px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: #171717;
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+
+.section-link:hover {
+    color: #284b72;
+
+    text-decoration: none;
+}
+
+
+.section-arrow {
+    color: #777777;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 27px;
+}
+
+
+/* =========================================
    PDF
-========================= */
+========================================= */
 
 .pdf-wrapper {
     width: 100%;
@@ -219,15 +376,18 @@ a:hover {
     border:
         1px solid #d8d8d8;
 
-    background: #f6f6f6;
+    background: #f7f7f7;
 }
+
 
 .pdf-wrapper iframe {
     width: 100%;
+
     height: 100%;
 
     border: none;
 }
+
 
 .fallback-link {
     margin-top: 12px;
@@ -243,9 +403,9 @@ a:hover {
 }
 
 
-/* =========================
-   RESEARCH
-========================= */
+/* =========================================
+   RESEARCH PREVIEW
+========================================= */
 
 .research-item {
     padding: 38px 0;
@@ -254,27 +414,31 @@ a:hover {
         1px solid #dedede;
 }
 
+
 .research-item:first-child {
     border-top: none;
+
     padding-top: 12px;
 }
+
 
 .research-item h2 {
     max-width: 850px;
 
-    margin: 4px 0 8px;
+    margin: 5px 0 8px;
 
-    font-size: 26px;
+    font-size: 25px;
 
     line-height: 1.35;
 
     font-weight: 500;
 }
 
-.paper-status {
-    margin: 0 0 4px;
 
-    color: #687684;
+.paper-status {
+    margin: 0 0 5px;
+
+    color: #697887;
 
     font-family:
         Arial,
@@ -290,6 +454,7 @@ a:hover {
     text-transform: uppercase;
 }
 
+
 .paper-meta {
     margin: 4px 0 14px;
 
@@ -303,8 +468,9 @@ a:hover {
     font-size: 14px;
 }
 
+
 .paper-links {
-    margin-top: 18px;
+    margin-top: 17px;
 
     font-family:
         Arial,
@@ -317,46 +483,121 @@ a:hover {
 }
 
 
-/* =========================
-   TEACHING
-========================= */
+.detail-link {
+    margin-top: 28px;
 
-.teaching-item {
-    padding: 28px 0;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   DETAIL PAGES
+========================================= */
+
+.page-header {
+    padding:
+        85px 0
+        52px;
+}
+
+
+.page-header h1 {
+    margin: 0 0 14px;
+
+    color: #151515;
+
+    font-size:
+        clamp(40px, 6vw, 58px);
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.03em;
+}
+
+
+.page-intro {
+    max-width: 760px;
+
+    color: #565656;
+
+    font-size: 18px;
+}
+
+
+.research-list {
+    padding-bottom: 90px;
+}
+
+
+.full-paper {
+    max-width: 900px;
+
+    padding: 42px 0;
 
     border-top:
         1px solid #dedede;
 }
 
-.teaching-item:first-child {
+
+.full-paper:first-child {
     border-top: none;
 }
 
-.teaching-item h2 {
-    margin: 0 0 6px;
 
-    font-size: 22px;
+.full-paper h2 {
+    margin: 5px 0 8px;
+
+    color: #202020;
+
+    font-size: 26px;
 
     font-weight: 500;
+
+    line-height: 1.35;
 }
 
-.teaching-item p {
-    margin: 4px 0;
+
+.coauthors {
+    margin: 4px 0 7px;
+
+    color: #565656;
 }
+
+
+.abstract {
+    margin-top: 18px;
+
+    max-width: 880px;
+}
+
 
 .muted {
     color: #777777;
 }
 
 
-/* =========================
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
 .site-footer {
     padding: 32px 0;
 
+    border-top:
+        1px solid #e6e6e6;
+
     color: #777777;
+
+    background: #ffffff;
 
     font-family:
         Arial,
@@ -367,9 +608,9 @@ a:hover {
 }
 
 
-/* =========================
+/* =========================================
    MOBILE
-========================= */
+========================================= */
 
 @media (max-width: 700px) {
 
@@ -377,70 +618,70 @@ a:hover {
         font-size: 16px;
     }
 
-    .hero {
+
+    .nav-container {
+        min-height: auto;
+
         padding:
-            65px 0 50px;
+            15px 0;
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap: 8px;
     }
 
-    .accordion-button {
+
+    .main-nav {
+        gap:
+            10px 18px;
+    }
+
+
+    .main-nav a {
+        font-size: 13px;
+    }
+
+
+    .hero {
+        padding:
+            64px 0
+            52px;
+    }
+
+
+    .intro {
+        font-size: 17px;
+    }
+
+
+    .accordion-button,
+    .section-link {
         font-size: 25px;
 
         padding:
             23px 0;
     }
 
+
     .pdf-wrapper {
         height: 650px;
     }
 
-    .intro {
-        font-size: 17px;
+
+    .page-header {
+        padding:
+            65px 0
+            40px;
     }
 
-}
 
+    .full-paper {
+        padding:
+            32px 0;
+    }
 
-.link-section {
-    border-bottom: 1px solid #e4e4e4;
-}
-
-.section-link {
-    width: 100%;
-
-    padding: 28px 0;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    color: #171717;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 30px;
-
-    font-weight: 500;
-
-    text-decoration: none;
-}
-
-.section-link:hover {
-    color: #284b72;
-    text-decoration: none;
-}
-
-.section-arrow {
-    color: #6e6e6e;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 28px;
 }
