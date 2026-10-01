@@ -398,3 +398,49 @@ a:hover {
     }
 
 }
+
+
+.link-section {
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.section-link {
+    width: 100%;
+
+    padding: 28px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: #171717;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+.section-link:hover {
+    color: #284b72;
+    text-decoration: none;
+}
+
+.section-arrow {
+    color: #6e6e6e;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 28px;
+}
