@@ -3,11 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Rihyeon Kang </title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <!-- Google tag (gtag.js) -->
+    <meta name="description"
+          content="Academic website of YOUR NAME, Ph.D. Candidate in Economics.">
+
+    <title>YOUR NAME | Economics</title>
+
+    <link rel="stylesheet" href="style.css">
+
+     <!-- Google Analytics tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QGF9E19XB9"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -20,19 +27,350 @@
 
 <body>
 
-    <h1>Rihyeon Kang</h1>
+    <main>
 
-    <p>Ph.D. Candidate in Economics</p>
+        <!-- =========================
+             ABOUT + CONTACT
+        ========================== -->
 
-    <h2>Research</h2>
+        <section class="hero">
 
-    <p>
-        My research interests include labor economics, technological change, and applied microeconomics.
-    </p>
+            <div class="container">
 
-    <h2>Contact</h2>
+                <p class="eyebrow">
+                    Ph.D. Candidate in Economics
+                </p>
 
-    <p>Email: rkang@ucsb.edu</p>
+                <h1>
+                    Rihyeon Kang
+                </h1>
+
+                <p class="affiliation">
+                    Department of Economics<br>
+                    University of California, Santa Barbara
+                </p>
+
+                <p class="intro">
+                    Hello! I am a Ph.D. candidate in Economics at the University of California, Santa Barbara. 
+                    My primary research interests broadly lie in labor and public economics. 
+                    Currently, my work focuses on three areas :
+                     - The dynamic consequences of routine-biased technological change for labor markets and education, with particular attention to skill mismatch
+                     - The effects of quotas on entry barriers and their unintended consequences
+                     - Evaluations of tax programs 
+                </p>
+
+                <div class="contact-inline">
+
+                    <a href="mailto:YOUR_EMAIL@university.edu">
+                        rkang@ucsb.edu
+                    </a>
+
+                    <span>·</span>
+
+                    <span>
+                        Santa Barbara, CA 
+                    </span>
+
+                    <span>·</span>
+
+                    <!--
+                    <a href="YOUR_GOOGLE_SCHOLAR_URL"
+                       target="_blank"
+                       rel="noopener">
+                        Google Scholar
+                    </a>
+                    -->
+
+                    <span>·</span>
+
+                    <a href="YOUR_GITHUB_URL"
+                       target="_blank"
+                       rel="noopener">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CV
+        ========================== -->
+
+        <section class="accordion-section">
+
+            <div class="container">
+
+                <button class="accordion-button"
+                        onclick="toggleSection('cv-content', this)">
+
+                    <span>Curriculum Vitae</span>
+                    <span class="accordion-icon">+</span>
+
+                </button>
+
+                <div id="cv-content"
+                     class="accordion-content">
+
+                    <div class="pdf-wrapper">
+
+                        <iframe
+                            src="files/cv.pdf"
+                            title="Curriculum Vitae">
+                        </iframe>
+
+                    </div>
+
+                    <p class="fallback-link">
+
+                        If the PDF does not display,
+                        <a href="files/cv.pdf"
+                           target="_blank"
+                           rel="noopener">
+                            open the CV directly
+                        </a>.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RESEARCH
+        ========================== -->
+
+        <section class="accordion-section">
+
+            <div class="container">
+
+                <button class="accordion-button"
+                        onclick="toggleSection('research-content', this)">
+
+                    <span>Research</span>
+                    <span class="accordion-icon">+</span>
+
+                </button>
+
+
+                <div id="research-content"
+                     class="accordion-content">
+
+
+                    <!-- JMP -->
+
+                    <article class="research-item">
+
+                        <p class="paper-status">
+                            Job Market Paper
+                        </p>
+
+                        
+                        <h2>
+                            JMP
+                        </h2>
+
+                        <p class="paper-meta">
+                            Rihyeon Kang 
+                        </p>
+
+                        <p>
+                            description of the JMP 
+                        </p>
+
+                        <p class="paper-links">
+
+                            <a href="files/jmp.pdf"
+                               target="_blank"
+                               rel="noopener">
+                                Paper PDF →
+                            </a>
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- PAPER 2 -->
+
+                    <article class="research-item">
+
+                        <p class="paper-status">
+                            Working Paper
+                        </p>
+
+                        <h2>
+                            WP1
+                        </h2>
+
+                        <!--
+                        <p class="paper-meta">
+                            with COAUTHOR NAME
+                        </p>
+                        -->
+
+                        <p>
+                            description of WP1
+                        </p>
+
+                    </article>
+
+
+                    <!-- PAPER 3 -->
+
+                    <article class="research-item">
+
+                        <p class="paper-status">
+                            Work in Progress
+                        </p>
+
+                        <h2>
+                            WP3
+                        </h2>
+
+                        <p>
+                            description of WP2
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TEACHING
+        ========================== -->
+
+        <section class="accordion-section">
+
+            <div class="container">
+
+                <button class="accordion-button"
+                        onclick="toggleSection('teaching-content', this)">
+
+                    <span>Teaching</span>
+                    <span class="accordion-icon">+</span>
+
+                </button>
+
+
+                <div id="teaching-content"
+                     class="accordion-content">
+
+
+                    <div class="teaching-item">
+
+                        <h2>
+                            Course Name
+                        </h2>
+
+                        <p>
+                            Teaching Assistant,
+                            YOUR UNIVERSITY
+                        </p>
+
+                        <p class="muted">
+                            Fall 2026
+                        </p>
+
+                    </div>
+
+
+                    <div class="teaching-item">
+
+                        <h2>
+                            Course Name
+                        </h2>
+
+                        <p>
+                            Teaching Assistant,
+                            YOUR UNIVERSITY
+                        </p>
+
+                        <p class="muted">
+                            Spring 2026
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                © <span id="year"></span> YOUR NAME
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        function toggleSection(id, button) {
+
+            const content =
+                document.getElementById(id);
+
+            const icon =
+                button.querySelector('.accordion-icon');
+
+            const isOpen =
+                content.classList.contains('open');
+
+            if (isOpen) {
+
+                content.classList.remove('open');
+
+                icon.textContent = '+';
+
+            } else {
+
+                content.classList.add('open');
+
+                icon.textContent = '−';
+
+                setTimeout(() => {
+
+                    content.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                }, 120);
+
+            }
+
+        }
+
+
+        document.getElementById('year').textContent =
+            new Date().getFullYear();
+
+    </script>
 
 </body>
 
